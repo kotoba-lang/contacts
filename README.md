@@ -1,9 +1,12 @@
 # contacts
 
-Portable CLJC contacts model for `contacts.gftd.ai`.
+[![CI](https://github.com/kotoba-lang/contacts/actions/workflows/ci.yml/badge.svg)](https://github.com/kotoba-lang/contacts/actions/workflows/ci.yml)
 
-People, organizations, handles, and consent state are plain EDN. Storage and sync
-are host concerns.
+Portable CLJC model for kotoba-lang/contacts.
+
+Pages editor: https://kotoba-lang.github.io/contacts/
+
+The Pages UI is local to kotoba-lang and does not redirect to external hosts.
 
 ## Test
 
