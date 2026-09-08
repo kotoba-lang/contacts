@@ -1,5 +1,5 @@
 (ns contacts.model
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn book
   ([id] (book id {}))
@@ -25,15 +25,15 @@
   (get-in book [:contacts/entries id]))
 
 (defn add-email [book id email]
-  (update-in book [:contacts/entries id :contacts/emails] (fnil conj []) (str/lower-case email)))
+  (update-in book [:contacts/entries id :contacts/emails] (fnil conj []) (str/lower email)))
 
 (defn add-handle [book id network handle]
   (assoc-in book [:contacts/entries id :contacts/handles network] handle))
 
 (defn search-name [book q]
-  (let [needle (str/lower-case q)]
+  (let [needle (str/lower q)]
     (->> (vals (:contacts/entries book))
-         (filter #(str/includes? (str/lower-case (:contacts/name %)) needle))
+         (filter #(str/includes? (str/lower (:contacts/name %)) needle))
          (sort-by :contacts/id)
          vec)))
 

@@ -1,5 +1,5 @@
 (ns contacts.validate
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn problem [severity code id msg]
   {:contacts/severity severity :contacts/code code :contacts/id id :contacts/msg msg})
