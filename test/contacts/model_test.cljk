@@ -1,5 +1,5 @@
 (ns contacts.model-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [contacts.model :as c]
             [contacts.validate :as v]))
 
